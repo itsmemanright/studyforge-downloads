@@ -1,0 +1,7 @@
+StudyForge review sample: Photosynthesis
+
+This short note was written by the app developer for release review. It is not a copied textbook or exam.
+
+Photosynthesis converts light energy into chemical energy. The light reactions take place in the thylakoid membranes of chloroplasts, producing ATP and NADPH. Splitting water releases oxygen. The Calvin cycle takes place in the stroma, fixing carbon dioxide while consuming ATP and NADPH. Closing stomata may reduce the carbon dioxide available for photosynthesis. At the light compensation point, photosynthetic carbon dioxide uptake equals respiratory release. Beyond the light saturation point, more light alone may not increase photosynthesis because another factor may become limiting.
+
+Suggested subject: Biology. Exam scope: light reactions, Calvin cycle and limiting factors.
