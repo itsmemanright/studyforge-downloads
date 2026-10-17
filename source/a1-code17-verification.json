@@ -1,0 +1,40 @@
+{
+  "version": "a1",
+  "versionCode": 17,
+  "package": "com.studyforge.app",
+  "javaTests": 79,
+  "uiTests": 39,
+  "failures": 0,
+  "lintErrors": 0,
+  "bundleValidation": "bundletool validate passed",
+  "signatures": "APK apksigner and AAB jarsigner verified; existing upload certificate retained",
+  "certificateSha256": "b61f602f618d608aebb8ad02417566dbc7e32da958471a0ece61c754a67474e0",
+  "assetAndAllDexMatch": true,
+  "changes": [
+    "Prominent no-login demo entry and persistent exit banner.",
+    "Demo actions cannot request native authentication, AI, or workspace writes.",
+    "Native state refresh preserves demo and restores actual workspace on exit.",
+    "Refuse demo entry during real work or file import.",
+    "Narrow phone study controls no longer overflow the document."
+  ],
+  "visualCheck": {
+    "viewport": "360x640 mobile HTML/WebView UI preview",
+    "actualScreenshotSize": "345x613",
+    "documentWidthMatchesViewport": true,
+    "note": "Code 17 checked in mobile browser preview; native emulator was not rerun."
+  },
+  "files": {
+    "StudyForge-a1-latest-code17.apk": {
+      "bytes": 142714,
+      "sha256": "46e84b5371736d3a0618cd71d5de643439f988038bcca2720c4af872ba7cefdb"
+    },
+    "StudyForge-a1-com.studyforge.app-code17.aab": {
+      "bytes": 143799,
+      "sha256": "b382f4b8f6adcf693212b55b24ec3e60aa8f6cb0d45c76851bbbd30742dea19a"
+    },
+    "StudyForge-a1-code17-source.zip": {
+      "bytes": 232757,
+      "sha256": "83e93f2c4ed7e2224afff27ddb2ae96d8001577810413133f2ecc333cc5d408e"
+    }
+  }
+}

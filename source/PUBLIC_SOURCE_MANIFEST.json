@@ -1,0 +1,565 @@
+{
+  "version": "a1",
+  "versionCode": 17,
+  "originalZipSha256": "83e93f2c4ed7e2224afff27ddb2ae96d8001577810413133f2ecc333cc5d408e",
+  "originalZipBytes": 232757,
+  "sourceFileCount": 88,
+  "unchangedRuntimeTestsAndBuild": true,
+  "changedPublicDocumentationOnly": [
+    "README.md",
+    "VERIFICATION.md",
+    ".gitignore"
+  ],
+  "files": [
+    {
+      "path": "android/.gitignore",
+      "originalSha256": "a22c2d3eacbfa07503bf4b6faff342b35a4b6ddcde96e5c3ed490e102fac21c0",
+      "publishedSha256": "dfe600d78e37c4d93b8c2d70a5c870a796dd80ad511e1a49385eb8597f8696d8",
+      "unchanged": false
+    },
+    {
+      "path": "android/README.md",
+      "originalSha256": "da0600946d4ae64f345ef19160a8d9b6103df9d4bfcb4d172f7a51811bd479f7",
+      "publishedSha256": "e8ebe86637c11ae25414e40540b1bbc6cc093b1bdba7b1409c3ef75e294059ee",
+      "unchanged": false
+    },
+    {
+      "path": "android/VERIFICATION.md",
+      "originalSha256": "7958ae7af1d37f69a73b1d12f8555591f178678ea591cf4a7332de56ba65534c",
+      "publishedSha256": "f54708bf5dce067fa37b71092d6b1216d62e929e97c89480d78ce909b1584d7d",
+      "unchanged": false
+    },
+    {
+      "path": "android/app/build.gradle",
+      "originalSha256": "9c24a5f797f413916bb8546d37c3d2226a12fed58f60028e7e9f4b2baffe8f60",
+      "publishedSha256": "9c24a5f797f413916bb8546d37c3d2226a12fed58f60028e7e9f4b2baffe8f60",
+      "unchanged": true
+    },
+    {
+      "path": "android/app/src/main/AndroidManifest.xml",
+      "originalSha256": "ded12763ddaf349292198899e36039ce4d6a815a13c564f896511466472a0970",
+      "publishedSha256": "ded12763ddaf349292198899e36039ce4d6a815a13c564f896511466472a0970",
+      "unchanged": true
+    },
+    {
+      "path": "android/app/src/main/assets/app.js",
+      "originalSha256": "13cb621fad8146ff9316bb37cf396906aaf3b852fc67270f8ea8fa9200e2f98e",
+      "publishedSha256": "13cb621fad8146ff9316bb37cf396906aaf3b852fc67270f8ea8fa9200e2f98e",
+      "unchanged": true
+    },
+    {
+      "path": "android/app/src/main/assets/customize.js",
+      "originalSha256": "2eeab40d394db527265319ae1cc60ae0f698e97e84a58012914959b528613658",
+      "publishedSha256": "2eeab40d394db527265319ae1cc60ae0f698e97e84a58012914959b528613658",
+      "unchanged": true
+    },
+    {
+      "path": "android/app/src/main/assets/feature-example.json",
+      "originalSha256": "82fbac614f27eb1c2cc6ec415f0d52ea75a6ee8065bb01073f2a42fd84ea2c98",
+      "publishedSha256": "82fbac614f27eb1c2cc6ec415f0d52ea75a6ee8065bb01073f2a42fd84ea2c98",
+      "unchanged": true
+    },
+    {
+      "path": "android/app/src/main/assets/feature-host.html",
+      "originalSha256": "805a494ba0a86552feff89f6f004cb5e30420fcf9fd9119bd97ea4b7aed3a62f",
+      "publishedSha256": "805a494ba0a86552feff89f6f004cb5e30420fcf9fd9119bd97ea4b7aed3a62f",
+      "unchanged": true
+    },
+    {
+      "path": "android/app/src/main/assets/feature-host.js",
+      "originalSha256": "59e09368c40eed201e0c8f0b039eb75913f99109383681fdb2902ac822f3f839",
+      "publishedSha256": "59e09368c40eed201e0c8f0b039eb75913f99109383681fdb2902ac822f3f839",
+      "unchanged": true
+    },
+    {
+      "path": "android/app/src/main/assets/features.js",
+      "originalSha256": "1c74095dbbe9246b2f04b71074cf37a24f9cc07ce5b57e7246ff88e9aa213ab3",
+      "publishedSha256": "1c74095dbbe9246b2f04b71074cf37a24f9cc07ce5b57e7246ff88e9aa213ab3",
+      "unchanged": true
+    },
+    {
+      "path": "android/app/src/main/assets/index.html",
+      "originalSha256": "8230349086013096001a2ed58346dc0f0c990c043871850aa2f4d90b61d6272f",
+      "publishedSha256": "8230349086013096001a2ed58346dc0f0c990c043871850aa2f4d90b61d6272f",
+      "unchanged": true
+    },
+    {
+      "path": "android/app/src/main/assets/quiz.js",
+      "originalSha256": "7c3d49b6ac6f2cc1581bc1e94e64595aaa4017dd116fa0a3fb54150f9f1aa218",
+      "publishedSha256": "7c3d49b6ac6f2cc1581bc1e94e64595aaa4017dd116fa0a3fb54150f9f1aa218",
+      "unchanged": true
+    },
+    {
+      "path": "android/app/src/main/assets/style.css",
+      "originalSha256": "838328096bba3cfaa397ad827dab2d244e383235eddbd193ecea281bc208de44",
+      "publishedSha256": "838328096bba3cfaa397ad827dab2d244e383235eddbd193ecea281bc208de44",
+      "unchanged": true
+    },
+    {
+      "path": "android/app/src/main/java/app/studyforge/mobile/AnalysisPipeline.java",
+      "originalSha256": "926cb74d85f7917976096c82f4209575aead2e5ed19e45626a4c99f6b6270ca4",
+      "publishedSha256": "926cb74d85f7917976096c82f4209575aead2e5ed19e45626a4c99f6b6270ca4",
+      "unchanged": true
+    },
+    {
+      "path": "android/app/src/main/java/app/studyforge/mobile/AnalysisStatus.java",
+      "originalSha256": "032cb4b0d5004fd86510b61ab5ac78fe4edc10dc734cc4d5d28f722516f4b751",
+      "publishedSha256": "032cb4b0d5004fd86510b61ab5ac78fe4edc10dc734cc4d5d28f722516f4b751",
+      "unchanged": true
+    },
+    {
+      "path": "android/app/src/main/java/app/studyforge/mobile/Api.java",
+      "originalSha256": "9e4a8a28f3cdda268eef0781c0ab4889c9e692a960874129e3c2ddc469726075",
+      "publishedSha256": "9e4a8a28f3cdda268eef0781c0ab4889c9e692a960874129e3c2ddc469726075",
+      "unchanged": true
+    },
+    {
+      "path": "android/app/src/main/java/app/studyforge/mobile/BatchPlan.java",
+      "originalSha256": "5173b20b191de3e256be94b530718f5e646bc7074e7c600a2efec776107c1c8b",
+      "publishedSha256": "5173b20b191de3e256be94b530718f5e646bc7074e7c600a2efec776107c1c8b",
+      "unchanged": true
+    },
+    {
+      "path": "android/app/src/main/java/app/studyforge/mobile/CallbackHttp.java",
+      "originalSha256": "df30cd64c2ffc9e3410a9073afd5cc7afb64ab3aea2411eee25437150612bceb",
+      "publishedSha256": "df30cd64c2ffc9e3410a9073afd5cc7afb64ab3aea2411eee25437150612bceb",
+      "unchanged": true
+    },
+    {
+      "path": "android/app/src/main/java/app/studyforge/mobile/ChatGptConnection.java",
+      "originalSha256": "db8f73914dce55872148dd0452f2927fa61a654d16e1c36195280f14103d6f11",
+      "publishedSha256": "db8f73914dce55872148dd0452f2927fa61a654d16e1c36195280f14103d6f11",
+      "unchanged": true
+    },
+    {
+      "path": "android/app/src/main/java/app/studyforge/mobile/DocumentLibrary.java",
+      "originalSha256": "36c4c5c5554f5a945bc8e4f9c36350a6bcf779da5960f47b2c87a73cf4fbbf1f",
+      "publishedSha256": "36c4c5c5554f5a945bc8e4f9c36350a6bcf779da5960f47b2c87a73cf4fbbf1f",
+      "unchanged": true
+    },
+    {
+      "path": "android/app/src/main/java/app/studyforge/mobile/EncryptedBlocks.java",
+      "originalSha256": "19eebf1137f63f6added7ea03a483ea89fa8e7ffb740f400a1d7172922e163e1",
+      "publishedSha256": "19eebf1137f63f6added7ea03a483ea89fa8e7ffb740f400a1d7172922e163e1",
+      "unchanged": true
+    },
+    {
+      "path": "android/app/src/main/java/app/studyforge/mobile/ExternalLinks.java",
+      "originalSha256": "9049eb28585b5300c51ba67687f562508a0411e95bf4da83dbedc3a3829090a4",
+      "publishedSha256": "9049eb28585b5300c51ba67687f562508a0411e95bf4da83dbedc3a3829090a4",
+      "unchanged": true
+    },
+    {
+      "path": "android/app/src/main/java/app/studyforge/mobile/FeatureActivity.java",
+      "originalSha256": "2ad195225a78f67f70a4f55b7d1a5f20146c9b49ea715575411f7fd0e61d10a3",
+      "publishedSha256": "2ad195225a78f67f70a4f55b7d1a5f20146c9b49ea715575411f7fd0e61d10a3",
+      "unchanged": true
+    },
+    {
+      "path": "android/app/src/main/java/app/studyforge/mobile/FeatureBuilder.java",
+      "originalSha256": "abe94e18bf102cbf0145ee690e7610f11de66e856777783e7291baeab7dc1cb9",
+      "publishedSha256": "abe94e18bf102cbf0145ee690e7610f11de66e856777783e7291baeab7dc1cb9",
+      "unchanged": true
+    },
+    {
+      "path": "android/app/src/main/java/app/studyforge/mobile/FeatureController.java",
+      "originalSha256": "c190abbcae80e112efc0c80e6bc4bd24cc138e06fe95526e0d3fdb2bd157b3f4",
+      "publishedSha256": "c190abbcae80e112efc0c80e6bc4bd24cc138e06fe95526e0d3fdb2bd157b3f4",
+      "unchanged": true
+    },
+    {
+      "path": "android/app/src/main/java/app/studyforge/mobile/FeatureProgram.java",
+      "originalSha256": "a288ba88f7805d6220d2d066df2135d730711948261f497b13d22e3b51352a3e",
+      "publishedSha256": "a288ba88f7805d6220d2d066df2135d730711948261f497b13d22e3b51352a3e",
+      "unchanged": true
+    },
+    {
+      "path": "android/app/src/main/java/app/studyforge/mobile/FeatureVersions.java",
+      "originalSha256": "0488447bbaa8cc2f085952a607736500c99205b8d81bd1c89ea678e4e206a93e",
+      "publishedSha256": "0488447bbaa8cc2f085952a607736500c99205b8d81bd1c89ea678e4e206a93e",
+      "unchanged": true
+    },
+    {
+      "path": "android/app/src/main/java/app/studyforge/mobile/FeatureWire.java",
+      "originalSha256": "d4086577e21adbb50b1dd1ebf046bb230ebcc5581a834bf3b5a659c2ca3d1c9d",
+      "publishedSha256": "d4086577e21adbb50b1dd1ebf046bb230ebcc5581a834bf3b5a659c2ca3d1c9d",
+      "unchanged": true
+    },
+    {
+      "path": "android/app/src/main/java/app/studyforge/mobile/FileCleanup.java",
+      "originalSha256": "4b4df7dd92e77833bd21200f20e969eb079b919e3f002975fab7371446d6bbae",
+      "publishedSha256": "4b4df7dd92e77833bd21200f20e969eb079b919e3f002975fab7371446d6bbae",
+      "unchanged": true
+    },
+    {
+      "path": "android/app/src/main/java/app/studyforge/mobile/GenerationReview.java",
+      "originalSha256": "7e5a8cc02bc7e21e8fc2a89fa88c3e6338c9fa3d57bcb4fca501f2b93683d34f",
+      "publishedSha256": "7e5a8cc02bc7e21e8fc2a89fa88c3e6338c9fa3d57bcb4fca501f2b93683d34f",
+      "unchanged": true
+    },
+    {
+      "path": "android/app/src/main/java/app/studyforge/mobile/JobService.java",
+      "originalSha256": "576c9b4898b7005559e320b126bdb88c15a766ae497cb53d5608ba0d622837ed",
+      "publishedSha256": "576c9b4898b7005559e320b126bdb88c15a766ae497cb53d5608ba0d622837ed",
+      "unchanged": true
+    },
+    {
+      "path": "android/app/src/main/java/app/studyforge/mobile/Json.java",
+      "originalSha256": "707c643119b51a36190847241dd9269a02177c60ada4faf5a5b837cdb192ad2a",
+      "publishedSha256": "707c643119b51a36190847241dd9269a02177c60ada4faf5a5b837cdb192ad2a",
+      "unchanged": true
+    },
+    {
+      "path": "android/app/src/main/java/app/studyforge/mobile/MainActivity.java",
+      "originalSha256": "1813355f67911050dda85e9f2799d24d140ca54b3cf4ed1c55d5d1425ef874e4",
+      "publishedSha256": "1813355f67911050dda85e9f2799d24d140ca54b3cf4ed1c55d5d1425ef874e4",
+      "unchanged": true
+    },
+    {
+      "path": "android/app/src/main/java/app/studyforge/mobile/ModelCatalog.java",
+      "originalSha256": "394cfc48a018c527283a5c422f7676fab5674f15d894f6d9e2f7b04ed04d6a2a",
+      "publishedSha256": "394cfc48a018c527283a5c422f7676fab5674f15d894f6d9e2f7b04ed04d6a2a",
+      "unchanged": true
+    },
+    {
+      "path": "android/app/src/main/java/app/studyforge/mobile/NoteImportActivity.java",
+      "originalSha256": "6d97ca1d39b3a48fcd293902480a83de00a56d6e3e66904207bf667b853c8bca",
+      "publishedSha256": "6d97ca1d39b3a48fcd293902480a83de00a56d6e3e66904207bf667b853c8bca",
+      "unchanged": true
+    },
+    {
+      "path": "android/app/src/main/java/app/studyforge/mobile/NoteTranscript.java",
+      "originalSha256": "385d464201dae381c6c41cc66a99df2fa64580d010646ece74be3d5824cb50df",
+      "publishedSha256": "385d464201dae381c6c41cc66a99df2fa64580d010646ece74be3d5824cb50df",
+      "unchanged": true
+    },
+    {
+      "path": "android/app/src/main/java/app/studyforge/mobile/OAuthSecurity.java",
+      "originalSha256": "f0ec11edfac261d894fcaf4a92678a310abde94d090c3b860ee609c46173337d",
+      "publishedSha256": "f0ec11edfac261d894fcaf4a92678a310abde94d090c3b860ee609c46173337d",
+      "unchanged": true
+    },
+    {
+      "path": "android/app/src/main/java/app/studyforge/mobile/PastExpansion.java",
+      "originalSha256": "581b67e835dc9482fd1c0d3bad84e8955f4b496c2ee776572037a46ddff8ebe3",
+      "publishedSha256": "581b67e835dc9482fd1c0d3bad84e8955f4b496c2ee776572037a46ddff8ebe3",
+      "unchanged": true
+    },
+    {
+      "path": "android/app/src/main/java/app/studyforge/mobile/PreparedStudy.java",
+      "originalSha256": "e52184bc0ff1480253deb31238f424ee3db06ecb3c6df417972d0c0276407621",
+      "publishedSha256": "e52184bc0ff1480253deb31238f424ee3db06ecb3c6df417972d0c0276407621",
+      "unchanged": true
+    },
+    {
+      "path": "android/app/src/main/java/app/studyforge/mobile/QuestionValidator.java",
+      "originalSha256": "0e95efd8bf07b207ee81cf5fc53379521fb4030e2a151fd40710e080bfbb2f0a",
+      "publishedSha256": "0e95efd8bf07b207ee81cf5fc53379521fb4030e2a151fd40710e080bfbb2f0a",
+      "unchanged": true
+    },
+    {
+      "path": "android/app/src/main/java/app/studyforge/mobile/ScreenInsets.java",
+      "originalSha256": "27c51c7a89bbf7df773e0d7f3a127aec5fc5f18cb4029a992a50e5c3d39d6def",
+      "publishedSha256": "27c51c7a89bbf7df773e0d7f3a127aec5fc5f18cb4029a992a50e5c3d39d6def",
+      "unchanged": true
+    },
+    {
+      "path": "android/app/src/main/java/app/studyforge/mobile/SecureVault.java",
+      "originalSha256": "33d06554b07dbd421f4820e89b146054e6865bc73e79ff1227e945d151eb9fa1",
+      "publishedSha256": "33d06554b07dbd421f4820e89b146054e6865bc73e79ff1227e945d151eb9fa1",
+      "unchanged": true
+    },
+    {
+      "path": "android/app/src/main/java/app/studyforge/mobile/SourceImporter.java",
+      "originalSha256": "b1e5d95ddc0871379ff237fc6d40912dfef59d395dc216cf28033853cdd655a0",
+      "publishedSha256": "b1e5d95ddc0871379ff237fc6d40912dfef59d395dc216cf28033853cdd655a0",
+      "unchanged": true
+    },
+    {
+      "path": "android/app/src/main/java/app/studyforge/mobile/Sse.java",
+      "originalSha256": "23324624d0f17d13e4d0d8e15f50b155d91bfb27468215e05c980b3b4197115b",
+      "publishedSha256": "23324624d0f17d13e4d0d8e15f50b155d91bfb27468215e05c980b3b4197115b",
+      "unchanged": true
+    },
+    {
+      "path": "android/app/src/main/java/app/studyforge/mobile/StudyApp.java",
+      "originalSha256": "e17cc0912dee2d9cfdd719d95ac5b904c3521e3132af31b5e32b45d91312de05",
+      "publishedSha256": "e17cc0912dee2d9cfdd719d95ac5b904c3521e3132af31b5e32b45d91312de05",
+      "unchanged": true
+    },
+    {
+      "path": "android/app/src/main/java/app/studyforge/mobile/StudyGenerator.java",
+      "originalSha256": "d33133bf7211348c1012b4e7939ee13b6005c4b0235397a63d37f854540ae604",
+      "publishedSha256": "d33133bf7211348c1012b4e7939ee13b6005c4b0235397a63d37f854540ae604",
+      "unchanged": true
+    },
+    {
+      "path": "android/app/src/main/java/app/studyforge/mobile/StudyRecords.java",
+      "originalSha256": "a465afc48cbe2f0a084577afdc986e30ae25d1041de167a9f5f285fee4b5b384",
+      "publishedSha256": "a465afc48cbe2f0a084577afdc986e30ae25d1041de167a9f5f285fee4b5b384",
+      "unchanged": true
+    },
+    {
+      "path": "android/app/src/main/java/app/studyforge/mobile/UiConfig.java",
+      "originalSha256": "782d39963b122a1d364ba8881444c71ad5f7dcf52e58e6758769dcab7937d8a7",
+      "publishedSha256": "782d39963b122a1d364ba8881444c71ad5f7dcf52e58e6758769dcab7937d8a7",
+      "unchanged": true
+    },
+    {
+      "path": "android/app/src/main/res/drawable/ic_app.xml",
+      "originalSha256": "6b4971beacbd60fdba29d0cebd53cefc11c42bf96eca9acafbaa0be6450776d1",
+      "publishedSha256": "6b4971beacbd60fdba29d0cebd53cefc11c42bf96eca9acafbaa0be6450776d1",
+      "unchanged": true
+    },
+    {
+      "path": "android/app/src/main/res/values/styles.xml",
+      "originalSha256": "fe6461b73a8495bbe17add50973ef730e798e10fe703c09b7b6c1a28ffb321bb",
+      "publishedSha256": "fe6461b73a8495bbe17add50973ef730e798e10fe703c09b7b6c1a28ffb321bb",
+      "unchanged": true
+    },
+    {
+      "path": "android/app/src/test/java/app/studyforge/mobile/AnalysisStatusTest.java",
+      "originalSha256": "cb156bbc3a9689fe5a2ddc690dc725f8669fc35b9948eae1f3b2fd08fa265188",
+      "publishedSha256": "cb156bbc3a9689fe5a2ddc690dc725f8669fc35b9948eae1f3b2fd08fa265188",
+      "unchanged": true
+    },
+    {
+      "path": "android/app/src/test/java/app/studyforge/mobile/ApiCancellationTest.java",
+      "originalSha256": "98055fc2ab1c4ee867c324e94ef46e9574c690790f0215c16e20e3a464c3d6fe",
+      "publishedSha256": "98055fc2ab1c4ee867c324e94ef46e9574c690790f0215c16e20e3a464c3d6fe",
+      "unchanged": true
+    },
+    {
+      "path": "android/app/src/test/java/app/studyforge/mobile/CallbackHttpTest.java",
+      "originalSha256": "143ffc90fec6c7fab5e3dcc86058bc2369dc4740ecc75504f6b30f9d87d01f53",
+      "publishedSha256": "143ffc90fec6c7fab5e3dcc86058bc2369dc4740ecc75504f6b30f9d87d01f53",
+      "unchanged": true
+    },
+    {
+      "path": "android/app/src/test/java/app/studyforge/mobile/CoreTest.java",
+      "originalSha256": "7b362cf8fab0b4fcbf4a34a4cfadf11cff5d6535f0f60c78a2b11b76420fe03e",
+      "publishedSha256": "7b362cf8fab0b4fcbf4a34a4cfadf11cff5d6535f0f60c78a2b11b76420fe03e",
+      "unchanged": true
+    },
+    {
+      "path": "android/app/src/test/java/app/studyforge/mobile/ExternalLinksTest.java",
+      "originalSha256": "14cfeefb15af159436bd744508da4bd1727bbb278e018647df0aefb07d38fe8e",
+      "publishedSha256": "14cfeefb15af159436bd744508da4bd1727bbb278e018647df0aefb07d38fe8e",
+      "unchanged": true
+    },
+    {
+      "path": "android/app/src/test/java/app/studyforge/mobile/FeatureTest.java",
+      "originalSha256": "9a3fa6acf1e789313f36282d995661e7110a563a4f664c2b8f3041d6b5d82b47",
+      "publishedSha256": "9a3fa6acf1e789313f36282d995661e7110a563a4f664c2b8f3041d6b5d82b47",
+      "unchanged": true
+    },
+    {
+      "path": "android/app/src/test/java/app/studyforge/mobile/ModelCatalogTest.java",
+      "originalSha256": "7d72749a52659d1bfd20ed1f31d4e6fa5844b45eb0aabbda07382e858295dbdc",
+      "publishedSha256": "7d72749a52659d1bfd20ed1f31d4e6fa5844b45eb0aabbda07382e858295dbdc",
+      "unchanged": true
+    },
+    {
+      "path": "android/app/src/test/java/app/studyforge/mobile/NoteTranscriptTest.java",
+      "originalSha256": "96a06cc30d6baea3cb6174559ee0d80577687e3bc25b610e134941f673f07c8c",
+      "publishedSha256": "96a06cc30d6baea3cb6174559ee0d80577687e3bc25b610e134941f673f07c8c",
+      "unchanged": true
+    },
+    {
+      "path": "android/app/src/test/java/app/studyforge/mobile/PastExpansionTest.java",
+      "originalSha256": "904f2d727ed453b22a410f08c7a061ed12b133ea3b8157cbbf5a88a00627397c",
+      "publishedSha256": "904f2d727ed453b22a410f08c7a061ed12b133ea3b8157cbbf5a88a00627397c",
+      "unchanged": true
+    },
+    {
+      "path": "android/app/src/test/java/app/studyforge/mobile/PreparedStudyTest.java",
+      "originalSha256": "87d5afd44c2c147c542fcf634f5e1a315e48de947020fbb6b7edab521e380727",
+      "publishedSha256": "87d5afd44c2c147c542fcf634f5e1a315e48de947020fbb6b7edab521e380727",
+      "unchanged": true
+    },
+    {
+      "path": "android/app/src/test/java/app/studyforge/mobile/StudyGeneratorTest.java",
+      "originalSha256": "011e56583b57284baf62602cbb4b2dc4438ed33533d8dcb53c104a2def47781b",
+      "publishedSha256": "011e56583b57284baf62602cbb4b2dc4438ed33533d8dcb53c104a2def47781b",
+      "unchanged": true
+    },
+    {
+      "path": "android/app/src/test/java/app/studyforge/mobile/UiConfigTest.java",
+      "originalSha256": "ab8b8788811a8df5377647420553b1972f6f2a87ddd628ff1bd2e3d88666729e",
+      "publishedSha256": "ab8b8788811a8df5377647420553b1972f6f2a87ddd628ff1bd2e3d88666729e",
+      "unchanged": true
+    },
+    {
+      "path": "android/app/src/test/java/app/studyforge/mobile/WholeBookTest.java",
+      "originalSha256": "43778542fb324bb731d941e937df72c849fca556d50eb1d9790a2500588255db",
+      "publishedSha256": "43778542fb324bb731d941e937df72c849fca556d50eb1d9790a2500588255db",
+      "unchanged": true
+    },
+    {
+      "path": "android/build.gradle",
+      "originalSha256": "048ecfefe09971849fc8c9326de9d0e8af7e50e371aed980e2e1617124bb969f",
+      "publishedSha256": "048ecfefe09971849fc8c9326de9d0e8af7e50e371aed980e2e1617124bb969f",
+      "unchanged": true
+    },
+    {
+      "path": "android/gradle.properties",
+      "originalSha256": "ece37fb746cbdc858afd70e1a03f355799d0510f5566ad0895fcbf24a1bb6918",
+      "publishedSha256": "ece37fb746cbdc858afd70e1a03f355799d0510f5566ad0895fcbf24a1bb6918",
+      "unchanged": true
+    },
+    {
+      "path": "android/gradle/wrapper/gradle-wrapper.jar",
+      "originalSha256": "2db75c40782f5e8ba1fc278a5574bab070adccb2d21ca5a6e5ed840888448046",
+      "publishedSha256": "2db75c40782f5e8ba1fc278a5574bab070adccb2d21ca5a6e5ed840888448046",
+      "unchanged": true
+    },
+    {
+      "path": "android/gradle/wrapper/gradle-wrapper.properties",
+      "originalSha256": "d7010368a34c1c06df2bae1a85d8b24c39b2499c74ac892fc7e66d005dbd7b8a",
+      "publishedSha256": "d7010368a34c1c06df2bae1a85d8b24c39b2499c74ac892fc7e66d005dbd7b8a",
+      "unchanged": true
+    },
+    {
+      "path": "android/gradlew",
+      "originalSha256": "a3648413b47ef77af21d5ebc36c687c7d103aaef3e17f33de7d4f080a6f300a3",
+      "publishedSha256": "a3648413b47ef77af21d5ebc36c687c7d103aaef3e17f33de7d4f080a6f300a3",
+      "unchanged": true
+    },
+    {
+      "path": "android/gradlew.bat",
+      "originalSha256": "57931b17dd228e5c24dac90e815d0bf82477e831a4618dfab4136f5446b42a9f",
+      "publishedSha256": "57931b17dd228e5c24dac90e815d0bf82477e831a4618dfab4136f5446b42a9f",
+      "unchanged": true
+    },
+    {
+      "path": "android/package-lock.json",
+      "originalSha256": "8c8e9d1962b3f88315ab85b7e50b418ab2f00f2a0248557d4dfffc8e1c530524",
+      "publishedSha256": "8c8e9d1962b3f88315ab85b7e50b418ab2f00f2a0248557d4dfffc8e1c530524",
+      "unchanged": true
+    },
+    {
+      "path": "android/package.json",
+      "originalSha256": "a498167eababe8c8746388bea01dc423f0828e6af77379c08091f33aed31c6bb",
+      "publishedSha256": "a498167eababe8c8746388bea01dc423f0828e6af77379c08091f33aed31c6bb",
+      "unchanged": true
+    },
+    {
+      "path": "android/scripts/build-play-bundle.ps1",
+      "originalSha256": "a76d4b7e403abffa961a0140239daad2818d2975ee881102e9503665a84ecdc3",
+      "publishedSha256": "a76d4b7e403abffa961a0140239daad2818d2975ee881102e9503665a84ecdc3",
+      "unchanged": true
+    },
+    {
+      "path": "android/scripts/export-upload-key-backup.ps1",
+      "originalSha256": "a9f6b92a2502635e93c5dc2911d2706aa021bf30cd9c24f765da1da2ccffa39e",
+      "publishedSha256": "a9f6b92a2502635e93c5dc2911d2706aa021bf30cd9c24f765da1da2ccffa39e",
+      "unchanged": true
+    },
+    {
+      "path": "android/scripts/preview.cjs",
+      "originalSha256": "0e19814a9f6d214e61b7f716ac36396bfd2a285f36eeb96a5234dccec1f65cb1",
+      "publishedSha256": "0e19814a9f6d214e61b7f716ac36396bfd2a285f36eeb96a5234dccec1f65cb1",
+      "unchanged": true
+    },
+    {
+      "path": "android/settings.gradle",
+      "originalSha256": "91816ca250bb29126be40ae5ac21677ec6b039e387afbd55f65367f23d63e8cd",
+      "publishedSha256": "91816ca250bb29126be40ae5ac21677ec6b039e387afbd55f65367f23d63e8cd",
+      "unchanged": true
+    },
+    {
+      "path": "android/tests/customize-ui.test.cjs",
+      "originalSha256": "d31e6ad0083092b7ca6eafae1acf57e2f961dea0708f182b97f17af02cc75152",
+      "publishedSha256": "d31e6ad0083092b7ca6eafae1acf57e2f961dea0708f182b97f17af02cc75152",
+      "unchanged": true
+    },
+    {
+      "path": "android/tests/demo-ui.test.cjs",
+      "originalSha256": "b459430224870a6745e00ec4edb8669af3bc1c254424fa2a2e33c0b0c4c599be",
+      "publishedSha256": "b459430224870a6745e00ec4edb8669af3bc1c254424fa2a2e33c0b0c4c599be",
+      "unchanged": true
+    },
+    {
+      "path": "android/tests/feature-browser-fixture.js",
+      "originalSha256": "5e81f3c75ba0c627629476f5f3092900f5710e8e00620b48672767d62e4ff8ff",
+      "publishedSha256": "5e81f3c75ba0c627629476f5f3092900f5710e8e00620b48672767d62e4ff8ff",
+      "unchanged": true
+    },
+    {
+      "path": "android/tests/feature-browser-test.html",
+      "originalSha256": "e8e09fb012008ea95281c83e2e4b9a1938b6972a6211c3fdc399fdee204d04b0",
+      "publishedSha256": "e8e09fb012008ea95281c83e2e4b9a1938b6972a6211c3fdc399fdee204d04b0",
+      "unchanged": true
+    },
+    {
+      "path": "android/tests/feature-runtime.test.cjs",
+      "originalSha256": "da548a3c961cb8b3b88ba79a4873e5a62980f63f08c14c1c44a8baac2c307e22",
+      "publishedSha256": "da548a3c961cb8b3b88ba79a4873e5a62980f63f08c14c1c44a8baac2c307e22",
+      "unchanged": true
+    },
+    {
+      "path": "android/tests/features-ui.test.cjs",
+      "originalSha256": "6e4fea49dcb92f567b269feccd983f77ee5c2929c9a30e4752e08d845756f0d9",
+      "publishedSha256": "6e4fea49dcb92f567b269feccd983f77ee5c2929c9a30e4752e08d845756f0d9",
+      "unchanged": true
+    },
+    {
+      "path": "android/tests/past-fixture.cjs",
+      "originalSha256": "935264e04bda93b0b225bda2f59ee39f2e7b52295a245eb68234a209345d1de0",
+      "publishedSha256": "935264e04bda93b0b225bda2f59ee39f2e7b52295a245eb68234a209345d1de0",
+      "unchanged": true
+    },
+    {
+      "path": "android/tests/past-ui.test.cjs",
+      "originalSha256": "15d4357de0f4c1f9addaa7c2e6e26c5472962c58030ead6771fd8ce46b37cfd4",
+      "publishedSha256": "15d4357de0f4c1f9addaa7c2e6e26c5472962c58030ead6771fd8ce46b37cfd4",
+      "unchanged": true
+    },
+    {
+      "path": "android/tests/study.test.cjs",
+      "originalSha256": "7d4fed76a031cfcecab6fcafc9c19a3b1c67da9c9ead0e5df31f781e3676fbe8",
+      "publishedSha256": "7d4fed76a031cfcecab6fcafc9c19a3b1c67da9c9ead0e5df31f781e3676fbe8",
+      "unchanged": true
+    },
+    {
+      "path": "android/tests/transfer-browser-fixture.js",
+      "originalSha256": "9a8ee99734a16d7d99ea9e62d99fe76ccabb18cbbbd551cd2ceb0616840b109a",
+      "publishedSha256": "9a8ee99734a16d7d99ea9e62d99fe76ccabb18cbbbd551cd2ceb0616840b109a",
+      "unchanged": true
+    },
+    {
+      "path": "android/tests/transfer-browser-test.html",
+      "originalSha256": "4c8cbde16b98bdfdb671c0cb25a17f69f54dd28e3e4aba838b7fc01ef99fd29b",
+      "publishedSha256": "4c8cbde16b98bdfdb671c0cb25a17f69f54dd28e3e4aba838b7fc01ef99fd29b",
+      "unchanged": true
+    },
+    {
+      "path": "android/tests/whole-book-ui.test.cjs",
+      "originalSha256": "73dcc0df6b682cfb03aa21b3db5b7e217e375b0ca1fcb6e6580f79856b6e2bc7",
+      "publishedSha256": "73dcc0df6b682cfb03aa21b3db5b7e217e375b0ca1fcb6e6580f79856b6e2bc7",
+      "unchanged": true
+    }
+  ],
+  "secretScan": {
+    "potentialCredentialsFound": 0,
+    "excluded": "Private keys, tokens, sessions, local paths, imported documents, recordings, learning backups, build caches and dependency installs are not included.",
+    "scope": "Filename checks, credential-pattern scan, local personal-path scan and manual review of relevant files. This is not a formal security certification."
+  },
+  "publicSourceRebuild": {
+    "javaTests": {
+      "tests": 79,
+      "failures": 0,
+      "errors": 0,
+      "skipped": 0
+    },
+    "uiTests": {
+      "passed": 39,
+      "failed": 0
+    },
+    "lintErrors": 0,
+    "debugApkBuilt": true,
+    "gradleVersion": "8.11.1",
+    "jdkVersion": 17,
+    "androidSdk": 36
+  }
+}

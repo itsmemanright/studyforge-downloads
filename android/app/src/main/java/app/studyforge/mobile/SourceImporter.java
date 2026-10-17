@@ -1,0 +1,32 @@
+package app.studyforge.mobile;
+
+import android.content.Context;
+import android.graphics.*;
+import android.graphics.pdf.PdfRenderer;
+import android.net.Uri;
+import android.os.ParcelFileDescriptor;
+import android.provider.OpenableColumns;
+import org.json.*;
+import java.io.*;
+import java.nio.charset.StandardCharsets;
+import java.util.*;
+
+final class SourceImporter {
+    static long size(Context c,Uri uri){try(var cursor=c.getContentResolver().query(uri,new String[]{OpenableColumns.SIZE},null,null,null)){if(cursor!=null&&cursor.moveToFirst()&&!cursor.isNull(0))return cursor.getLong(0);}catch(Exception ignored){}return -1;}
+    static String name(Context c,Uri uri){try(var cursor=c.getContentResolver().query(uri,new String[]{OpenableColumns.DISPLAY_NAME},null,null,null)){if(cursor!=null&&cursor.moveToFirst())return cursor.getString(0);}catch(Exception ignored){}return "가져온 자료";}
+    static JSONObject text(String title,String text,String role) throws Exception {if(text.trim().length()<("past".equals(role)?1:30))throw new IOException("past".equals(role)?"족보 단서나 답을 입력해 주세요.":"자료 내용은 30자 이상 입력해 주세요.");if(text.length()>100000)throw new IOException("텍스트는 자료 하나당 10만 자까지 가져올 수 있습니다. 나누어 주세요.");return Json.object("id",UUID.randomUUID().toString(),"title",title.isEmpty()?"수업 자료":title,"role",role,"text",text,"images",new JSONArray(),"createdAt",System.currentTimeMillis());}
+    static JSONObject file(Context c,Uri uri,String role,int start,int end) throws Exception {
+        String title=name(c,uri),type=c.getContentResolver().getType(uri);if(type==null)type="";
+        if(type.equals("application/pdf")||title.toLowerCase(Locale.ROOT).endsWith(".pdf"))return pdf(c,uri,role,start,end);
+        if(type.startsWith("image/")){byte[] bytes=bytes(c,uri,20_000_000);BitmapFactory.Options bounds=new BitmapFactory.Options();bounds.inJustDecodeBounds=true;BitmapFactory.decodeByteArray(bytes,0,bytes.length,bounds);if(bounds.outWidth<1||bounds.outHeight<1)throw new IOException("사진을 읽을 수 없습니다.");BitmapFactory.Options opts=new BitmapFactory.Options();while(Math.max(bounds.outWidth,bounds.outHeight)/Math.max(1,opts.inSampleSize)>2000)opts.inSampleSize=Math.max(1,opts.inSampleSize)*2;Bitmap b=BitmapFactory.decodeByteArray(bytes,0,bytes.length,opts);if(b==null)throw new IOException("사진을 읽을 수 없습니다.");JSONArray images=Json.array(Json.object("page",1,"data",encode(b)));b.recycle();return Json.object("id",UUID.randomUUID().toString(),"title",title,"role",role,"text","","images",images,"createdAt",System.currentTimeMillis());}
+        if(type.startsWith("text/")||title.matches("(?i).*\\.(txt|md|srt|vtt|csv)$")){String text=new String(bytes(c,uri,1_000_000),StandardCharsets.UTF_8).replace("\uFEFF","");if(text.contains("\uFFFD"))throw new IOException("UTF-8 텍스트 파일로 저장한 뒤 다시 가져와 주세요.");return text(title,text,role);}
+        throw new IOException("PDF·사진·UTF-8 텍스트를 선택해 주세요. 녹음은 클로바노트 녹취 텍스트를 사용하세요.");
+    }
+    static int pageCount(Context c,Uri uri) throws Exception {try(ParcelFileDescriptor p=c.getContentResolver().openFileDescriptor(uri,"r");PdfRenderer renderer=new PdfRenderer(p)){return renderer.getPageCount();}}
+    static JSONObject pdf(Context c,Uri uri,String role,int start,int end) throws Exception {if(start<1||end<start||end-start>=5)throw new IOException("한 번에 연속된 PDF 1~5쪽을 선택해 주세요.");JSONArray images=new JSONArray();try(ParcelFileDescriptor p=c.getContentResolver().openFileDescriptor(uri,"r");PdfRenderer renderer=new PdfRenderer(p)){if(end>renderer.getPageCount())throw new IOException("PDF의 실제 쪽수를 확인해 주세요.");for(int i=start-1;i<end;i++){try(PdfRenderer.Page page=renderer.openPage(i)){float scale=1600f/Math.max(page.getWidth(),page.getHeight());Bitmap b=Bitmap.createBitmap(Math.max(1,Math.round(page.getWidth()*scale)),Math.max(1,Math.round(page.getHeight()*scale)),Bitmap.Config.ARGB_8888);b.eraseColor(Color.WHITE);page.render(b,null,null,PdfRenderer.Page.RENDER_MODE_FOR_DISPLAY);images.put(Json.object("page",i+1,"data",encode(b)));b.recycle();}}}return Json.object("id",UUID.randomUUID().toString(),"title",name(c,uri)+" · "+start+"–"+end+"쪽","role",role,"text","","images",images,"createdAt",System.currentTimeMillis());}
+    static byte[] bytes(Context c,Uri uri,int limit) throws Exception {try(InputStream in=c.getContentResolver().openInputStream(uri);ByteArrayOutputStream out=new ByteArrayOutputStream()){if(in==null)throw new IOException("파일을 열 수 없습니다.");byte[] bytes=new byte[8192];int n;while((n=in.read(bytes))!=-1){if(out.size()+n>limit)throw new IOException("파일이 너무 큽니다. 발췌한 자료를 사용해 주세요.");out.write(bytes,0,n);}return out.toByteArray();}}
+    private static String encode(Bitmap b){ByteArrayOutputStream out=new ByteArrayOutputStream();b.compress(Bitmap.CompressFormat.JPEG,82,out);return "data:image/jpeg;base64,"+Base64.getEncoder().encodeToString(out.toByteArray());}
+    static JSONArray renderPdf(File file,int start,int end) throws Exception {JSONArray images=new JSONArray();try(ParcelFileDescriptor fd=ParcelFileDescriptor.open(file,ParcelFileDescriptor.MODE_READ_ONLY);PdfRenderer renderer=new PdfRenderer(fd)){if(start<1||end<start||end>renderer.getPageCount()||end-start>9)throw new IOException("PDF 처리 범위가 올바르지 않습니다.");for(int i=start-1;i<end;i++)try(PdfRenderer.Page page=renderer.openPage(i)){float scale=1600f/Math.max(page.getWidth(),page.getHeight());Bitmap bitmap=Bitmap.createBitmap(Math.max(1,Math.round(page.getWidth()*scale)),Math.max(1,Math.round(page.getHeight()*scale)),Bitmap.Config.ARGB_8888);try{bitmap.eraseColor(Color.WHITE);page.render(bitmap,null,null,PdfRenderer.Page.RENDER_MODE_FOR_DISPLAY);images.put(Json.object("page",i+1,"data",encode(bitmap)));}finally{bitmap.recycle();}}}return images;}
+    static JSONArray renderPhoto(File file) throws Exception {BitmapFactory.Options bounds=new BitmapFactory.Options();bounds.inJustDecodeBounds=true;BitmapFactory.decodeFile(file.getAbsolutePath(),bounds);if(bounds.outWidth<1||bounds.outHeight<1)throw new IOException("사진을 읽을 수 없습니다.");BitmapFactory.Options options=new BitmapFactory.Options();options.inSampleSize=1;while(Math.max(bounds.outWidth,bounds.outHeight)/options.inSampleSize>2000)options.inSampleSize*=2;Bitmap bitmap=BitmapFactory.decodeFile(file.getAbsolutePath(),options);if(bitmap==null)throw new IOException("사진을 읽을 수 없습니다.");try{return Json.array(Json.object("page",1,"data",encode(bitmap)));}finally{bitmap.recycle();}}
+
+}
