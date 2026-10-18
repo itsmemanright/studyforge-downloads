@@ -1,7 +1,7 @@
 # 스터디포지 다운로드
 
-- [APK 다운로드 · a1 코드 18](https://github.com/itsmemanright/studyforge-downloads/releases/download/a1-code18/StudyForge-a1-code18.apk)
-- [원본 소스 ZIP 다운로드 · a1 코드 18](https://github.com/itsmemanright/studyforge-downloads/raw/refs/heads/main/source/StudyForge-a1-code18-source.zip)
+- [APK 다운로드 · a1 코드 19](https://github.com/itsmemanright/studyforge-downloads/releases/download/a1-code19/StudyForge-a1-code19.apk)
+- [원본 소스 ZIP 다운로드 · a1 코드 19](https://github.com/itsmemanright/studyforge-downloads/raw/refs/heads/main/source/StudyForge-a1-code19-source.zip)
 
 APK는 휴대폰에 설치하고, 소스 ZIP은 개발하거나 다른 AI에 전달할 때 사용하세요.
 
